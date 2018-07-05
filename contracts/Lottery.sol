@@ -1,9 +1,13 @@
 pragma solidity ^0.4.17;
 
+//Lottery that uses modifiers to give permision to a manager who releases funds to a randomly 
+//selected participant
+
 contract Lottery { 
     // not about security but rather about whether or not somone can access varaible
     address public manager;
     address[] public players; 
+
     
     function Lottery() public { 
         manager = msg.sender; 
